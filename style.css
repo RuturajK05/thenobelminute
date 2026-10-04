@@ -302,6 +302,15 @@ tbody tr:hover { background: rgba(237, 230, 214, 0.03); }
   color: var(--parchment);
 }
 
+.laureate-val {
+  color: var(--parchment);
+  font-size: 0.86rem;
+  white-space: normal;
+  min-width: 14rem;
+  max-width: 22rem;
+  line-height: 1.4;
+}
+
 .date-val {
   color: var(--parchment-dim);
   font-size: 0.82rem;

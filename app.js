@@ -43,7 +43,9 @@ function renderEpisodes() {
   let rows = episodes.filter(e => {
     if (!searchTerm) return true;
     const term = searchTerm.toLowerCase();
-    return String(e.episode).includes(term) || (e.year && String(e.year).includes(term));
+    return String(e.episode).includes(term)
+      || (e.year && String(e.year).includes(term))
+      || (e.laureates && e.laureates.toLowerCase().includes(term));
   });
 
   rows.sort((a, b) => {
@@ -68,6 +70,7 @@ function renderEpisodes() {
     tr.innerHTML = `
       <td class="ep-num">#${e.episode}</td>
       <td>${yearCell}</td>
+      <td class="laureate-val">${e.laureates ? e.laureates : ""}</td>
       <td class="date-val">${fmtDate(e.date)}</td>
       <td>${watchCell}</td>
     `;
