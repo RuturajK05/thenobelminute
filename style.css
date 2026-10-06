@@ -139,7 +139,19 @@ h1, h2 { font-family: 'Fraunces', serif; margin: 0; }
   font-family: 'Space Mono', monospace;
 }
 
-.countdown.done .countdown-label { color: var(--gold-bright); }
+.final-name {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(1.9rem, 6vw, 2.7rem);
+  color: var(--gold-bright);
+  line-height: 1.1;
+}
+
+.final-cite {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--parchment-dim);
+}
 
 /* ---------- MAIN / TABS ---------- */
 

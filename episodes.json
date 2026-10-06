@@ -954,17 +954,17 @@
   {
     "episode": 119,
     "date": "2026-10-05",
-    "year": null,
+    "year": 1936,
     "label": null,
-    "laureates": null,
+    "laureates": "Victor Hess, Carl Anderson",
     "link": ""
   },
   {
     "episode": 120,
     "date": "2026-10-06",
-    "year": null,
+    "year": 2026,
     "label": null,
-    "laureates": null,
+    "laureates": "Francis Halzen",
     "link": ""
   }
 ]

@@ -1,30 +1,3 @@
-// ---------- Countdown ----------
-// 2026 Physics Nobel Prize announcement: Tue 6 Oct 2026, 3:15 PM IST (UTC+5:30)
-const TARGET = new Date("2026-10-06T15:15:00+05:30");
-
-function pad(n) { return String(n).padStart(2, "0"); }
-
-function tickCountdown() {
-  const now = new Date();
-  let diff = TARGET - now;
-  const el = document.getElementById("countdown");
-  if (diff <= 0) {
-    diff = 0;
-    el.classList.add("done");
-    document.getElementById("countdown-footnote").textContent = "Announced — watch Episode 120";
-  }
-  const days = Math.floor(diff / 86400000);
-  const hours = Math.floor((diff % 86400000) / 3600000);
-  const mins = Math.floor((diff % 3600000) / 60000);
-  const secs = Math.floor((diff % 60000) / 1000);
-  document.getElementById("cd-days").textContent = pad(days);
-  document.getElementById("cd-hours").textContent = pad(hours);
-  document.getElementById("cd-mins").textContent = pad(mins);
-  document.getElementById("cd-secs").textContent = pad(secs);
-}
-tickCountdown();
-setInterval(tickCountdown, 1000);
-
 // ---------- Data + rendering ----------
 let episodes = [];
 let specials = [];
@@ -66,7 +39,7 @@ function renderEpisodes() {
         : `<span class="year-val pending">TBA</span>`;
     const watchCell = e.link
       ? `<a class="watch-link" href="${e.link}" target="_blank" rel="noopener">Watch &rarr;</a>`
-      : `<span class="watch-pending">not yet posted</span>`;
+      : `<span class="watch-pending">link coming soon</span>`;
     tr.innerHTML = `
       <td class="ep-num">#${e.episode}</td>
       <td>${yearCell}</td>
@@ -99,7 +72,7 @@ function renderSpecials() {
       : `<span class="topic-val pending">TBA</span>`;
     const watchCell = s.link
       ? `<a class="watch-link" href="${s.link}" target="_blank" rel="noopener">Watch &rarr;</a>`
-      : `<span class="watch-pending">not yet posted</span>`;
+      : `<span class="watch-pending">link coming soon</span>`;
     tr.innerHTML = `
       <td class="ep-num">#${s.special}</td>
       <td>${topicCell}</td>
